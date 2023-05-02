@@ -1,0 +1,122 @@
+.main_interface{
+    display: flex;
+    position: relative;
+}
+
+.left_main{
+    width: 22%;
+    position: sticky;
+}
+
+.right_main{
+    width: 78%;
+}
+
+.menu_container{
+    width: 260px;
+    height: auto;
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
+    border-radius: 30px;
+    margin: 25px 70px 15px 20px;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);    
+}
+.menu_container a{
+    display: block;
+    font-size: 30px;
+    margin-left: 30px;
+    margin-top: 30px;
+    font-weight: 400;
+    color: var(--gray);
+    text-decoration: none;
+}
+
+.menu_agenda{
+    font-size: 30px;
+    color: var(--gray);
+}
+
+.menu_agenda:hover{
+    cursor: pointer;
+    color: var(--blue-light);
+}
+
+.menu_container a:hover
+{
+    cursor: pointer;
+    color: var(--blue-light);
+    transition: 0.4s;
+}
+
+.menu_container li
+{
+    list-style:disc;
+    color:var(--blue-soft);
+    margin-left: 30px;
+    width: 200px;
+}
+
+.menu_container li:hover{
+    cursor: pointer;
+}
+
+.menu_container li span{
+    color: var(--gray);
+    font-size: 15px;
+}
+
+.menu_container li:last-child{
+    list-style: none;
+    margin-left: 26px;
+}
+
+.menu_container li:last-child span{
+    text-decoration: underline;
+    color: #939393;   
+}
+
+.menu_container li:last-child span img{
+    margin-right: 12px;
+    height: 14px;
+    width: 14px;
+}
+
+.menu_container li span:hover{
+    color: var(--gold);
+    transition: 0.4s;
+}
+
+.menu_container li:last-child span:hover{
+    color: var(--black);
+    transition: 0.4s;
+}
+
+
+.menu_active{
+    color: var(--black);
+    text-decoration: none;
+}
+
+.menu_active:hover{
+    color: var(--blue-light);
+    cursor: pointer;
+}
+.agenda_arrow{
+    transform: rotate(180deg);
+}
+
+.agenda_arrow_active{
+    transform: rotate(0deg);
+    transition:0.8s;
+}
+
+.agenda_childs{
+    display: block;
+    opacity: 0;
+    transition: opacity 0.6s;
+}
+
+.agenda_childs_active{
+    opacity: 1;
+}
