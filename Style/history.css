@@ -1,6 +1,6 @@
 .history_container{
     width: 90%;
-    height: 500px;
+    height: auto;
     display: inline-block;
     border-style: solid;
     border-width: 1px;
@@ -51,7 +51,7 @@ input[type="text"] {
 .clear_history p{
     color: var(--red);
     font-weight: 500;
-    margin-left: 470px;
+    margin-left: 525px;
   }
 
 .clear_history p:hover{
@@ -61,7 +61,8 @@ input[type="text"] {
 .table_history_container{
     margin-left: 20px;
     margin-top: 20px;
-    width: 805px;
+    margin-bottom: 25px;
+    width: 870px;
     border-radius: 20px;
     border: 1px solid #646464;
     

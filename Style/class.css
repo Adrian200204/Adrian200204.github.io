@@ -1,0 +1,142 @@
+.class_content_container{
+    width: 90%;
+    height: auto;
+    display: inline-block;
+    margin: 50px 0 0 6%;
+}
+
+.title_class{
+    font-size: 30px;
+    font-weight: 700;
+}
+.title_class_container{
+    display: flex;
+}
+
+.title_class_container img{
+    margin-left: 10px;
+    margin-top: 15px;
+    width: 20px;
+    height: 20px;
+}
+
+.title_class_container img:hover{
+    cursor: pointer;
+}
+
+.total_students{
+    display: flex;
+    margin-top: -10px;
+}
+
+.total_students img{
+    width: 20px;
+    height: 20px;
+}
+
+.total_students_text{
+    margin-top: -2px;
+    margin-left: 5px;
+    color: var(--gray);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.class_description{
+    display: block;
+}
+
+.class_description_title{
+    font-size: 17px;
+    font-weight: 700;
+    margin-top: -5px;
+}
+
+.class_description_content{
+    font-weight: 500;
+}
+
+.class_meeting{
+    display: flexbox;
+    margin-top: 15px;
+}
+.class_meeting_childs{
+    width: 100px;
+    height: 20px;
+    background-color: var(--purple-light);
+    padding: 2px 30px;
+    border-radius: 15px;
+    text-decoration: none;
+    color:var(--black);
+    font-weight: 500;
+}
+
+.class_meeting_childs:hover{
+    color: var(--orange-bright);
+    transition: 0.4s ease-in;
+}
+
+.class_meeting a img{
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.table_mystudents_class_container{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.table_mystudents_class{
+    margin-top: 15px;
+}
+
+.table_mystudents_class_title_row{
+    background-color: var(--blue-soft); 
+}
+
+
+.table_mystudents_class {
+    font-weight: 400;
+    padding: 5px 0;
+    border-color: rgba(0, 0, 0, 0.3);
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.table_mystudents_class th,.table_mystudents_class td{
+    border-right: 1px;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.3);
+    border-collapse: collapse;
+}
+.table_mystudents_class_container table {
+    border-collapse: collapse;
+    border-radius: 15px;
+    border-style: hidden; /* hide standard table (collapsed) border */
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3); /* this draws the table border  */ 
+}
+
+.table_mystudents_class_title_row th:first-child{
+    border-top-left-radius: 15px;
+}
+
+.table_mystudents_class_title_row th:last-child{
+    border-top-right-radius: 15px;
+}
+
+.table_mystudents_class td{
+    border-bottom: none;
+    padding: 3px 0;
+}
+
+.plus_table_class{
+    margin: 10px 0 0 47%;
+}
+
+.plus_table_class img{
+    width: 30px;
+    height: 30px;
+}

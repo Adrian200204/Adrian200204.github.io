@@ -7,6 +7,9 @@
 @import url("./history.css");
 @import url("./schedule.css");
 @import url("./homepage.css");
+@import url("./class.css");
+@import url("./class_child.css");
+@import url("./calendar.css");
 *{
     margin: 0;
     padding: 0;
@@ -28,12 +31,13 @@ html ::-webkit-scrollbar
 
 html ::-webkit-scrollbar-thumb
 {
-    border: 1px solid;
-    border-color: black;
+    /* border: 1px solid;
+    border-color: black; */
     background: linear-gradient(#dcdcdca7,#dcdcdca7);
 }
 
 html ::-webkit-scrollbar-track
 {
-    background: rgb(210, 210, 210);
+    /* background: rgb(210, 210, 210); */
+    background-color: transparent;
 }
