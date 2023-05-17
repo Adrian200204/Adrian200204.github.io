@@ -13,7 +13,7 @@
 }
 
 .menu_container{
-    width: 230px;
+    width: 100%;
     height: auto;
     border-style: solid;
     border-width: 1px;
@@ -32,6 +32,16 @@
     font-weight: 400;
     color: var(--gray);
     text-decoration: none;
+}
+
+.menu_container div img{
+    width: 100%;
+    height: auto;
+    padding-right: 5%;
+}
+
+.menu_container a{
+    font-size: 1.8rem;
 }
 
 .menu_agenda{
