@@ -229,3 +229,17 @@
 .table_score_content tr{
     border-bottom: 1px solid var(--gray);
 }
+
+.saveButtonClassChild{
+    margin-left: 150px;
+    margin-top: 8px;
+    background-color: transparent;
+    border: 2px solid aqua;
+    padding: 1px 10px;
+    font-weight: 500;
+    border-radius: 15px;
+}
+
+.saveButtonClassChild:hover{
+    color: var(--green-font);
+}

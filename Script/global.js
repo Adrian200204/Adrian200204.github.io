@@ -8,6 +8,15 @@ arrow.classList.toggle("agenda_arrow_active");
 agendaChilds.classList.toggle("agenda_childs_active");
   });
 
+ // Check if the renamed text is stored in local storage when the page loads
+ document.addEventListener('DOMContentLoaded', function() {
+  const savedName = localStorage.getItem('newNameAgendaChild');
+  if (savedName) {
+    const renamedText = document.getElementById('rename_agenda_child');
+    renamedText.textContent = savedName;
+  }
+});
+
 
  // calendar
  const calendar = document.querySelector(".calendar"),
@@ -484,3 +493,5 @@ function convertTime(time) {
  time = timeHour + ":" + timeMin + " " + timeFormat;
  return time;
 }
+
+

@@ -58,7 +58,7 @@ function renderTable() {
 
   const totalStudents = tableDataClass.length;
   totalStudentsText.textContent = `${totalStudents} Students`;
-
+  saveToLocalStorage();
 }
 
 

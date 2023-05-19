@@ -191,6 +191,14 @@
 .table_mystudents_homepage_title_row{
     text-align: center;
     background-color: var(--blue-soft);
+    
+}
+
+.table_mystudents_homepage_title_row th{
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+}
+.table_mystudents_homepage_title_row th:last-child{
+    border-right: none;
 }
 
 .table_mystudents_homepage td{

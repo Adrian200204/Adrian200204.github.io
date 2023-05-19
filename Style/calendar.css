@@ -234,7 +234,7 @@
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  padding-left: 4px;
+  margin-left: -10px;
 }
 .events .event {
   position: relative;

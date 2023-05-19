@@ -141,6 +141,10 @@
     height: 30px;
 }
 
+.plus_table_class img:hover{
+    cursor: pointer;
+}
+
 .class_edit_btn{
     
     background-color: transparent;
