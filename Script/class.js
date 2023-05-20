@@ -28,6 +28,43 @@ const renameClassBtn = document.getElementById('renameClassName');
   });
 
 
+  //Description text
+  const saveButton = document.getElementById("saveButtonDescriptionEdit");
+const descriptionEdit = document.getElementById("DescriptionEdit");
+
+descriptionEdit.style.resize = "none"; // Prevent manual resizing
+
+function adjustTextareaHeight() {
+  descriptionEdit.style.height = "auto";
+  descriptionEdit.style.height = descriptionEdit.scrollHeight + "px";
+}
+
+descriptionEdit.addEventListener("input", adjustTextareaHeight);
+
+saveButton.style.display = "none";
+
+descriptionEdit.addEventListener("input", function() {
+  if (descriptionEdit.value.trim() !== "") {
+    saveButton.style.display = "block";
+  } else {
+    saveButton.style.display = "none";
+  }
+});
+
+saveButton.addEventListener("click", function() {
+  localStorage.setItem("savedText", descriptionEdit.value);
+  alert("Your changes have been saved successfully!");
+});
+
+window.addEventListener("load", function() {
+  const savedText = localStorage.getItem("savedText");
+  if (savedText) {
+    descriptionEdit.value = savedText;
+    adjustTextareaHeight(); // Adjust textarea height with saved content
+  }
+});
+
+
   // Table Students
 
 // Retrieve existing table data from local storage or initialize an empty array
