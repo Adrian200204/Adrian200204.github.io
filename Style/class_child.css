@@ -243,3 +243,13 @@
 .saveButtonClassChild:hover{
     color: var(--green-font);
 }
+
+.class_child_title .class_child_title_course img{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.class_child_title .class_child_title_course img:hover{
+    cursor: pointer;
+}
