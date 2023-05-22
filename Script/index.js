@@ -19,3 +19,5 @@ function renderNamesTable() {
 
 // Initial rendering
 renderNamesTable();
+
+

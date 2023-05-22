@@ -102,6 +102,7 @@
     text-align: center;
 }
 
+
 .table_absence_class_child td{
     border-bottom: 2px solid var(--gray) ;  
     text-align: center;
@@ -137,6 +138,10 @@
     background-color: var(--gold);
 }
 
+.table_absence_class_child select{
+    color: white;
+}
+
 .option_attendance{
     background-color: var(--green-font);
     color: white;
@@ -151,30 +156,47 @@
 }
 
 .class_child_list_meet_task a{
-    height: auto;
-    width: max-content;
+    display: flex;
     font-size: 15px;
+    align-items: center;
     text-decoration: none;
     font-weight: 500;
     color: var(--black);
+    background-color: var(--purple-light);
+    border-radius: 20px;
+    margin-bottom: 10px;
+    padding: 7px 10px;
 }
 
-.class_child_list_meet_task a div{
-    background-color: var(--purple-light);
-    text-align: left;
-    border-radius: 20px;
-    padding: 10px 20px;
-    width: 360px;
-    margin-bottom: 10px;
+.class_child_list_meet_task .test1{
+  flex-grow: 1;
+  max-width: 90%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+
+.class_child_list_meet_task .test1:hover{
+    cursor: pointer;
+    color: var(--blue-light);
+}
+    
 .class_child_list_meet_task p{
     margin-bottom: 10px;
 }
 
+.class_child_list_meet_task img {
+    height: 15px;
+    width: 15px;
+    margin-left: 20px;
+    cursor: pointer;
+  } 
 .child_class_table_score_container{
     width: 100%;
     height: auto;
+    padding-bottom: 20px;
 }
+
 
 .table_score_title{
     font-size: 20px;
@@ -199,7 +221,7 @@
 
 .table_score_content td{
   font-weight: 400;
-  padding: 1px 0;
+  padding: 3px 0;
   border-right: 1px;
   border-top: 1px;
   border-style: solid;
@@ -229,7 +251,6 @@
 .table_score_content tr{
     border-bottom: 1px solid var(--gray);
 }
-
 .saveButtonClassChild{
     margin-left: 150px;
     margin-top: 8px;
