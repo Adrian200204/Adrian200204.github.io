@@ -18,25 +18,7 @@
 		
 			// Update the dynamicText element with the updated text
 			document.getElementById("calendarClassChildText").innerHTML = updatedDateChildClass;
-		
-			// Add event listener to the saveButton
-			var saveButtonChildClass = document.getElementById("saveButtonClassChild");
-			saveButtonChildClass.addEventListener("click", function() {
-			  // Save the updated text to local storage
-			  localStorage.setItem("updatedDateChildClass", updatedDateChildClass);
-			});
-			// Add event listener to the window's beforeunload event
-			window.addEventListener("beforeunload", function(event) {
-				// Cancel the default event and prompt the user to save
-				event.preventDefault();
-				event.returnValue = ""; // For modern browsers
-		  
-				// Display the alert message
-				var confirmationMessage = "Are you sure you want to leave? Your changes may not be saved.";
-				event.returnValue = confirmationMessage; // For older browsers
-		  
-				return confirmationMessage;
-			  });
+			localStorage.setItem("updatedDateChildClass", updatedDateChildClass);
 		  }
 		
 		  // Call the function when the DOM is ready

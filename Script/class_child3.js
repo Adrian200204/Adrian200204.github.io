@@ -37,7 +37,7 @@ const newRow = document.createElement('tr');
 newRow.innerHTML = `
 <td>${row.Name}</td>
 <td>
-  <select class="option_attendance2" id="option_attendance2${index}">
+  <select class="option_attendance3" id="option_attendance3${index}">
     <option value="hadir" id="hadir${index}"><a>H</a></option>
     <option value="sakit" id="sakit${index}"><a>S</a></option>
     <option value="absen" id="absen${index}"><a>A</a></option>
@@ -48,8 +48,8 @@ newRow.innerHTML = `
 tableAbsenceClassChild.appendChild(newRow);
 
 // Set the selected value based on the saved data or default to "hadir"
-const select = newRow.querySelector(`#option_attendance2${index}`);
-select.value = localStorage.getItem(`option_attendance2${index}`) || "hadir";
+const select = newRow.querySelector(`#option_attendance3${index}`);
+select.value = localStorage.getItem(`option_attendance3${index}`) || "hadir";
 
 // Update the select style based on the saved data or default to "hadir" color
 const color = select.value === "sakit" ? "var(--blue-light)" :
@@ -62,7 +62,7 @@ select.style.backgroundColor = color;
 
 renderTableAbsence();
 
-const selects = document.querySelectorAll(".option_attendance2");
+const selects = document.querySelectorAll(".option_attendance3");
 
 selects.forEach((select, index) => {
 select.addEventListener("change", function() {
@@ -73,7 +73,7 @@ select.value === "izin" ? "var(--gold)" :
 select.style.backgroundColor = color;
 
 // Save the selected option value in local storage
-localStorage.setItem(`option_attendance2${index}`, select.value);
+localStorage.setItem(`option_attendance3${index}`, select.value);
 });
 });
 
@@ -87,7 +87,7 @@ var image = document.querySelector('#renameTitleClassToday');
 var paragraph = image.parentNode;
 
 // Retrieve the saved text value from local storage
-var savedText = localStorage.getItem('titleClassToday2');
+var savedText = localStorage.getItem('titleClassToday3');
 
 // Set the text value if it exists
 if (savedText !== null) {
@@ -104,7 +104,7 @@ if (newText !== null) {
 paragraph.firstChild.textContent = newText;
 
 // Save the new text in local storage
-localStorage.setItem('titleClassToday2', newText);
+localStorage.setItem('titleClassToday3', newText);
 }
 });
 
@@ -125,7 +125,7 @@ var newMaterialName = prompt("Enter a new name for the material link:");
 if (newMaterialName !== null) {
 var materialLink = document.querySelector(".class_child_list_meet_task a .test1");
 materialLink.textContent = newMaterialName;
-saveTextToLocalStorage("materialName2", newMaterialName);
+saveTextToLocalStorage("materialName3", newMaterialName);
 }
 });
 
@@ -135,14 +135,14 @@ var newTaskName = prompt("Enter a new name for the task link:");
 if (newTaskName !== null) {
 var taskLink = document.querySelector(".class_child_list_meet_task a:last-child .test1");
 taskLink.textContent = newTaskName;
-saveTextToLocalStorage("taskName2", newTaskName);
+saveTextToLocalStorage("taskName3", newTaskName);
 }
 });
 
 // Load the saved text from local storage when the page is loaded
 window.addEventListener("load", function() {
-var savedMaterialName = loadTextFromLocalStorage("materialName2");
-var savedTaskName = loadTextFromLocalStorage("taskName2");
+var savedMaterialName = loadTextFromLocalStorage("materialName3");
+var savedTaskName = loadTextFromLocalStorage("taskName3");
 
 if (savedMaterialName) {
 document.querySelector(".class_child_list_meet_task a .test1").textContent = savedMaterialName;
@@ -173,7 +173,7 @@ return /^https?:\/\//i.test(text);
 // Function to save the edited values to local storage
 function saveEditedValuesReportToLocalStorage() {
 const tableRows = Array.from(document.querySelectorAll('#table-score-content tr'));
-const editedData2 = [];
+const editedData3 = [];
 
 tableRows.forEach(row => {
 const name = row.cells[0].textContent;
@@ -181,23 +181,23 @@ const score = row.cells[1].textContent;
 const evaluation = row.cells[2].textContent;
 const report = row.cells[3].textContent;
 
-editedData2.push({ name, score, evaluation, report });
+editedData3.push({ name, score, evaluation, report });
 });
 
-localStorage.setItem('editedData2', JSON.stringify(editedData2));
+localStorage.setItem('editedData3', JSON.stringify(editedData3));
 }
 
 // Function to load the edited values from local storage
 function loadEditedValuesReportFromLocalStorage() {
-const editedData2JSON = localStorage.getItem('editedData2');
-if (editedData2JSON) {
-const editedData2 = JSON.parse(editedData2JSON);
+const editedData3JSON = localStorage.getItem('editedData3');
+if (editedData3JSON) {
+const editedData3 = JSON.parse(editedData3JSON);
 
 const tableRows = Array.from(document.querySelectorAll('#table-score-content tr'));
 tableRows.forEach((row, index) => {
-row.cells[1].textContent = editedData2[index].score;
-row.cells[2].textContent = editedData2[index].evaluation;
-row.cells[3].textContent = editedData2[index].report;
+row.cells[1].textContent = editedData3[index].score;
+row.cells[2].textContent = editedData3[index].evaluation;
+row.cells[3].textContent = editedData3[index].report;
 });
 }
 }

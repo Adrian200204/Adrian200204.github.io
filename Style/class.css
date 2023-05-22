@@ -80,12 +80,15 @@
 }
 
 .class_meeting{
-    display: flexbox;
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 15px;
 }
 .class_meeting_childs{
-    width: 100px;
-    height: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: auto;
+    height: auto;
     background-color: var(--purple-light);
     padding: 2px 30px;
     border-radius: 15px;
