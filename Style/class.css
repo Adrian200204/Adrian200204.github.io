@@ -204,3 +204,82 @@
     color: white;
     transition: 0.3s;
 }
+
+.table_class_meetings_container{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-collapse: collapse;
+    border-radius: 15px;
+    border-style: hidden; /* hide standard table (collapsed) border */
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3); /* this draws the table border  */ 
+}
+
+.table_class_meetings{
+    margin-top: 15px;
+    font-weight: 400;
+    padding: 5px 0;
+    border-color: rgba(0, 0, 0, 0.3);
+    border-collapse: collapse;
+    font-weight: 500;
+    text-align: center;
+}
+
+.table-body-meetings_title{
+    background-color: var(--blue-soft); 
+}
+
+.table_class_meetings th, .table_class_meetings td{
+    border-right: 1px;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.3);
+    border-collapse: collapse;
+}
+
+.table_class_meetings th:last-child{
+    border-right: none;
+}
+
+.table_class_meetings td:last-child{
+    border-right: none;
+}
+
+.table-body-meetings_title th:first-child{
+    border-top-left-radius: 15px;
+}
+
+.table-body-meetings_title th:last-child{
+    border-top-right-radius: 15px;
+}
+
+.table_class_meetings td{
+    border-bottom: none;
+    padding: 7px 0;
+}
+
+.table_class_meetings_col_students{
+    background-color: var(--blue-soft);
+    padding: 1px 2px;
+}
+
+.hadir{
+    color: var(--green-font);
+}
+
+.absent{
+    color: var(--red);
+}
+
+.sakit{
+    color: var(--blue-light);
+}
+
+.izin{
+    color: var(--gold);
+}
+
+.table_class_meetings td a{
+    color: var(--black);
+    text-decoration: none;
+}

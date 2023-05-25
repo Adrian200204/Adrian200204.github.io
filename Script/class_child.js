@@ -175,86 +175,82 @@ function saveTextToLocalStorage(key, text) {
 function saveEditedValuesReportToLocalStorage() {
 	const tableRows = Array.from(document.querySelectorAll('#table-score-content tr'));
 	const editedData = [];
-  
+	
 	tableRows.forEach(row => {
-	  const name = row.cells[0].textContent;
-	  const score = row.cells[1].textContent;
-	  const evaluation = row.cells[2].textContent;
-	  const report = row.cells[3].textContent;
-  
-	  editedData.push({ name, score, evaluation, report });
+	const name = row.cells[0].textContent;
+	const score = row.cells[1].textContent;
+	const evaluation = row.cells[2].textContent;
+	const report = row.cells[3].textContent;
+	
+	editedData.push({ name, score, evaluation, report });
 	});
-  
+	
 	localStorage.setItem('editedData', JSON.stringify(editedData));
-  }
-  
-  // Function to load the edited values from local storage
-  function loadEditedValuesReportFromLocalStorage() {
+	}
+	
+	// Function to load the edited values from local storage
+	function loadEditedValuesReportFromLocalStorage() {
 	const editedDataJSON = localStorage.getItem('editedData');
 	if (editedDataJSON) {
-	  const editedData = JSON.parse(editedDataJSON);
-  
-	  const tableRows = Array.from(document.querySelectorAll('#table-score-content tr'));
-	  tableRows.forEach((row, index) => {
-		row.cells[1].textContent = editedData[index].score;
-		row.cells[2].textContent = editedData[index].evaluation;
-		row.cells[3].textContent = editedData[index].report;
-	  });
-	}
-  }
-  
-  function renderNamesReportTable() {
-	const tableBodyClassPage = document.getElementById('table-score-content');
-  
-	tableDataClass.forEach((row, index) => {
-	  const newRow = document.createElement('tr');
-  
-	  const nameCell = document.createElement('td');
-	  nameCell.textContent = row.Name;
-	  newRow.appendChild(nameCell);
-  
-	  const scoreCell = document.createElement('td');
-	  scoreCell.textContent = '';
-	  scoreCell.addEventListener('click', function() {
-		const newScore = prompt('Enter a new score:');
-		if (newScore !== null) {
-		  this.textContent = newScore;
-		  saveEditedValuesReportToLocalStorage(); // Corrected function name
-		}
-	  });
-	  newRow.appendChild(scoreCell);
-  
-	  const evaluationCell = document.createElement('td');
-	  evaluationCell.textContent = '';
-	  evaluationCell.addEventListener('click', function() {
-		const newEvaluation = prompt('Enter a new evaluation:');
-		if (newEvaluation !== null) {
-		  this.textContent = newEvaluation;
-		  saveEditedValuesReportToLocalStorage(); // Corrected function name
-		}
-	  });
-	  newRow.appendChild(evaluationCell);
-  
-	  const reportCell = document.createElement('td');
-	  reportCell.textContent = 'Link';
-	  reportCell.addEventListener('click', function() {
-		const newLink = prompt('Enter a new report link:');
-		if (newLink !== null) {
-		  this.textContent = newLink;
-		  saveEditedValuesReportToLocalStorage(); // Corrected function name
-		}
-	  });
-	  newRow.appendChild(reportCell);
-  
-	  tableBodyClassPage.appendChild(newRow);
+	const editedData = JSON.parse(editedDataJSON);
+	
+	const tableRows = Array.from(document.querySelectorAll('#table-score-content tr'));
+	tableRows.forEach((row, index) => {
+	row.cells[1].textContent = editedData[index].score;
+	row.cells[2].textContent = editedData[index].evaluation;
+	row.cells[3].textContent = editedData[index].report;
 	});
-  }
-  
-  // Initial rendering
-  renderNamesReportTable();
-  
-  // Load the edited values from local storage when the page is loaded
-  window.addEventListener('load', function() {
+	}
+	}
+	
+	function renderNamesReportTable() {
+	const tableBodyClassPage = document.getElementById('table-score-content');
+	
+	tableDataClass.forEach((row, index) => {
+	const newRow = document.createElement('tr');
+	
+	const nameCell = document.createElement('td');
+	nameCell.textContent = row.Name;
+	newRow.appendChild(nameCell);
+	
+	const scoreCell = document.createElement('td');
+	scoreCell.textContent = '';
+	scoreCell.addEventListener('click', function() {
+	const newScore = prompt('Enter a new score:');
+	if (newScore !== null) {
+	  this.textContent = newScore;
+	  saveEditedValuesReportToLocalStorage();
+	}
+	});
+	newRow.appendChild(scoreCell);
+	
+	const evaluationCell = document.createElement('td');
+	evaluationCell.textContent = '';
+	evaluationCell.addEventListener('click', function() {
+	const newEvaluation = prompt('Enter a new evaluation:');
+	if (newEvaluation !== null) {
+	  this.textContent = newEvaluation;
+	  saveEditedValuesReportToLocalStorage();
+	}
+	});
+	newRow.appendChild(evaluationCell);
+	
+	 const reportCell = document.createElement('td');
+    const reportLink = document.createElement('a');
+    reportLink.href = 'report.html';
+    reportLink.textContent = 'Link';
+    reportCell.appendChild(reportLink);
+    newRow.appendChild(reportCell);
+	
+	tableBodyClassPage.appendChild(newRow);
+	});
+	}
+	
+	// Initial rendering
+	renderNamesReportTable();
+	
+	// Load the edited values from local storage when the page is loaded
+	window.addEventListener('load', function() {
 	loadEditedValuesReportFromLocalStorage();
-  });
-  
+	});
+	

@@ -10,8 +10,8 @@ function renderNamesTable() {
     newRow.innerHTML = `
       <td>${index + 1}</td>
       <td>${row.Name}</td>
-      <td>${row.DateBirth}</td>
       <td>${row.Class}</td>
+      <td>${row.ParentsNumber}</td>
     `;
     tableBodyClassPage.appendChild(newRow);
   });

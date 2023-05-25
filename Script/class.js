@@ -91,10 +91,13 @@ function renderTable() {
       </td>
     `;
     tableBodyClassPage.appendChild(newRow);
-  });
+  }); 
 
   const totalStudents = tableDataClass.length;
   totalStudentsText.textContent = `${totalStudents} Students`;
+
+  
+
   saveToLocalStorage();
 }
 
@@ -152,3 +155,24 @@ function saveToLocalStorage() {
 
 // Initial rendering
 renderTable();
+
+
+document.addEventListener("DOMContentLoaded", function() {
+      var elements = document.getElementsByTagName("body")[0].getElementsByTagName("*");
+      
+      for (var i = 0; i < elements.length; i++) {
+        var element = elements[i];
+        
+        if (element.textContent.trim() === "hadir") {
+          element.classList.add("hadir");
+        } else if (element.textContent.trim() === "sakit") {
+          element.classList.add("sakit");
+        }
+        else if (element.textContent.trim() === "absen") {
+          element.classList.add("absent");
+        }
+        else if (element.textContent.trim() === "izin") {
+          element.classList.add("izin");
+        }
+      }
+    });
