@@ -180,9 +180,9 @@ function saveEditedValuesReportToLocalStorage() {
 	const name = row.cells[0].textContent;
 	const score = row.cells[1].textContent;
 	const evaluation = row.cells[2].textContent;
-	const report = row.cells[3].textContent;
+	const report = row.cells[3];
 	
-	editedData.push({ name, score, evaluation, report });
+	editedData.push({ name, score, evaluation,report});
 	});
 	
 	localStorage.setItem('editedData', JSON.stringify(editedData));
@@ -198,7 +198,7 @@ function saveEditedValuesReportToLocalStorage() {
 	tableRows.forEach((row, index) => {
 	row.cells[1].textContent = editedData[index].score;
 	row.cells[2].textContent = editedData[index].evaluation;
-	row.cells[3].textContent = editedData[index].report;
+	// row.cells[3].textContent = editedData[index].report;
 	});
 	}
 	}

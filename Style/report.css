@@ -1,0 +1,22 @@
+.report_container{
+    width: 90%;
+    height: auto;
+    display: inline-block;
+    margin: 50px 0 0 6%;
+}
+
+.upper_buttons_report{
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+}
+
+.report_upper_icon img{
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
+
+.report_upper_icon img:hover{
+    cursor: pointer;
+}

@@ -177,7 +177,7 @@ tableRows.forEach(row => {
 const name = row.cells[0].textContent;
 const score = row.cells[1].textContent;
 const evaluation = row.cells[2].textContent;
-const report = row.cells[3].textContent;
+const report = row.cells[3];
 
 editedData10.push({ name, score, evaluation, report });
 });
@@ -195,7 +195,7 @@ const tableRows = Array.from(document.querySelectorAll('#table-score-content tr'
 tableRows.forEach((row, index) => {
 row.cells[1].textContent = editedData10[index].score;
 row.cells[2].textContent = editedData10[index].evaluation;
-row.cells[3].textContent = editedData10[index].report;
+// row.cells[3].textContent = editedData10[index].report;
 });
 }
 }
@@ -233,15 +233,11 @@ if (newEvaluation !== null) {
 newRow.appendChild(evaluationCell);
 
 const reportCell = document.createElement('td');
-reportCell.textContent = 'Link';
-reportCell.addEventListener('click', function() {
-const newLink = prompt('Enter a new report link:');
-if (newLink !== null) {
-  this.textContent = newLink;
-  saveEditedValuesReportToLocalStorage();
-}
-});
-newRow.appendChild(reportCell);
+    const reportLink = document.createElement('a');
+    reportLink.href = 'report.html';
+    reportLink.textContent = 'Link';
+    reportCell.appendChild(reportLink);
+    newRow.appendChild(reportCell);
 
 tableBodyClassPage.appendChild(newRow);
 });

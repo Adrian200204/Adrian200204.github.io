@@ -283,3 +283,8 @@
     color: var(--black);
     text-decoration: none;
 }
+
+.table_class_meetings td a:hover{
+    transition: 0.3s ease-in;
+    color: var(--gold);
+}
