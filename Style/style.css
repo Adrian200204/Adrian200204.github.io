@@ -11,6 +11,7 @@
 @import url("./class_child.css");
 @import url("./calendar.css");
 @import url("report.css");
+@import url("./about_us.css");
 
 *{
     margin: 0;
