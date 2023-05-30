@@ -64,25 +64,18 @@
 
                         <!-- Calendar -->
                         <div class="wrapper">
-                          <div class="date_year">
-                            <p class="current-date"></p>
-                            <div class="icons">
-                              <span id="prev" class="material-symbols-rounded">chevron_left</span>
-                              <span id="next" class="material-symbols-rounded">chevron_right</span>
+                          <div class="calendarSchedule" id="tableCalendarSchedule">
+                            <div class="headerCalendar">
+                                <!-- Aqui é onde ficará o h1 com o mês e o ano -->
+                                <div class="monthSchedule" id="month-header">
+                
+                                </div>
+                                <div class="buttons">
+                                    <button class="icon" onclick="prevMonth()" title="Mês anterior"><i class="fas fa-chevron-left"><img src="./Assets/arrow_back_child_class.png" width="15px" height="15px"></i></button>
+                                    <button class="icon" onclick="nextMonth()" title="Próximo mês"><i class="fas fa-chevron-right "><img src="./Assets/arrow_back_child_class.png" width="15px" height="15px" style="transform: rotate(180deg);"></i></button>
+                                </div>
                             </div>
-                          </div>
-                          <div class="calendar">
-                            <ul class="weeks">
-                              <li>Sun</li>
-                              <li>Mon</li>
-                              <li>Tue</li>
-                              <li>Wed</li>
-                              <li>Thu</li>
-                              <li>Fri</li>
-                              <li>Sat</li>
-                            </ul>
-                            <ul class="days"></ul>
-                          </div>
+                        </div>
                         </div>
                       
                       </div>
@@ -106,15 +99,15 @@
                               </tr>
                               <tr>
                                 <td>Mr Andre  </td>
-                                <td>09.00-10.00
+                                <td class="point-active-schedule-green">09.00-10.00
                                   BHS INDO</td>
                                 <td></td>
                                 <td ></td>
-                                <td>09.00-10.00
+                                <td class="point-active-schedule-green">09.00-10.00
                                   BHS INDO</td>
                                 <td></td>
                                 <td ></td>
-                                <td >09.00-10.00
+                                <td class="point-active-schedule-green">09.00-10.00
                                   BHS INDO</td>
                               </tr>
                               <tr>
@@ -122,22 +115,22 @@
                                 <td></td>
                                 <td></td>
                                 <td ></td>
-                                <td>17.00-18.00 
+                                <td class="point-active-schedule-yellow">17.00-18.00 
                                   PPKN</td>
-                                <td>17.00-18.00
+                                <td class="point-active-schedule-yellow">17.00-18.00
                                   PPKN</td>
                                 <td ></td>
                                 <td ></td>
                               </tr>
                               <tr>
-                                <td>Mr Style</td>
-                                <td>17.00-18.00
+                                <td >Mr Style</td>
+                                <td class="point-active-schedule-purple">17.00-18.00
                                   ENGLISH</td>
                                 <td></td>
                                 <td ></td>
                                 <td></td>
                                 <td></td>
-                                <td >17.00-18.00
+                                <td class="point-active-schedule-purple">17.00-18.00
                                   ENGLISH</td>
                                 <td ></td>
                               </tr>
@@ -156,6 +149,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="./Script/global.js"></script>
-    <script src="./Script/schedule.js"></script>   
+    <script src="./Script/schedule.js"></script>
+    <script src="./Script/schedule_calendar.js"></script>   
 </body>
 </html>
