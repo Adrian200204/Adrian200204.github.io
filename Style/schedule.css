@@ -44,6 +44,10 @@
 
 /* left side */
 
+.schedule_left_2{
+  display: block;
+}
+
 .schedule_main_contents{
   width: 100%;
   height: auto;
@@ -52,13 +56,18 @@
 
 .schedule_note_container{
   height: max-content;
-  width: 590px;
+  width: 570px;
   border-style: solid;
   border-width: 1px;
   border-color: transparent;
   border-radius: 15px;
   margin-right: 25px;
-  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);  
+  box-shadow: 6px 5px 15px rgba(0, 0, 0, 0.2);  
+}
+
+.schedule_note_container:nth-child(2){
+  margin-top: 20px;
+  z-index: 10px;
 }
 .title_notes{
   font-size: 30px;
@@ -169,21 +178,9 @@
   color: var(--purple);
 }
 
-/* Calendar */
-
-/* 
-input,
-button,
-textarea {
-    font-family: "Open Sans", sans-serif;
-    font-size: 14px;
-} */
-
-
-/* Basis */
-
 .wrapper{
   font-family: 'Lato', sans-serif;
+  margin-right: 50px;
 }
 
 .btn {
@@ -197,7 +194,7 @@ textarea {
   color: #262626;
   border-radius: 10px;
   height: 50px;
-  font-weight: 600;
+  font-weight: 700;
   min-width: 100px;
   padding: 0px 20px;
   transition: 0.2s ease;
@@ -324,6 +321,7 @@ font-size:20px;
 }
 
 .calendarSchedule {
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);  
   height: 370px;
   width: 324px;
   border-radius: 18px;
