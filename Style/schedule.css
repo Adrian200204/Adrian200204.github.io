@@ -245,6 +245,17 @@
   z-index: -1;
 }
 
+
+.btn-day-schedule.others::before{
+  position: absolute;
+  content: '';
+  width: 40px;
+  height: 40px;
+  background: var(--purple);
+  border-radius: 10px;
+  z-index: -1;
+}
+
 .text-field {
   padding: 10px;
   height: 50px;
@@ -389,4 +400,33 @@ font-size:20px;
   align-items: center;
   text-align: center;
   z-index: 99;
+}
+
+
+#box{
+    background-color: var(--blue-light);
+    color: white;
+    display: none;
+    font-weight: 700;
+    position: relative;
+    top: 10%;
+    margin-left: 20px;
+    left: 0;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-top: 10px;
+    width: 90%;
+    z-index: 100;
+}
+
+
+.dot {
+  display: block;
+  width: 4px;
+  height: 4px;
+  background-color: red;
+  position: relative;
+  border-radius: 70%;
+  bottom: 25%;
+  left: 26%;
 }
