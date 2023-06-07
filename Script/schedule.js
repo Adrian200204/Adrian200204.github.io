@@ -57,3 +57,74 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+document.getElementById('askReschedule').addEventListener('click', function() {
+  var email = prompt('Enter your email address:');
+  
+  if (email) {
+    var date = prompt('Enter the date (YYYY-MM-DD):');
+    var time = prompt('Enter the time (HH:MM to HH:MM):');
+    var promptText = 'Email: ' + email + '\nDate: ' + date + '\nTime: ' + time;
+
+    var confirmation = confirm('Do you want to send it?'+promptText);
+        if (confirmation) {
+          alert("Sent");
+        }
+  }
+});
+
+// Get reference to the tables
+var table1 = document.getElementById('table_schedule_tutor');
+var table2 = document.getElementById('table_schedule_tutor_detail');
+// var table3 = document.getElementById('table_schedule_tutor_detail2')
+// var table4 = document.getElementById('table_schedule_tutor_detail3');
+
+// Set initial visibility
+table1.style.display = 'block';
+table2.style.display = 'none';
+// table3.style.display = 'none';
+// table3.style.display = 'none';
+
+// Get references to the tutor rows in Table 1
+var tutorRows = document.querySelectorAll('#table_schedule_tutor tr:not(.table_schedule_title_row)');
+
+// Add click event listeners to the tutor rows
+tutorRows.forEach(function(row) {
+  var tutorNameCell = row.querySelector('td:first-child');
+  var tutorName = tutorNameCell.textContent;
+
+  // Check if the row belongs to Mr. Andre
+  if (tutorName === 'Mr.Andre') {
+    tutorNameCell.addEventListener('click', function() {
+      toggleTables();
+      console.log('Clicked Mr. Andre in Table 1');
+    });
+  }
+});
+
+// Get references to the tutor rows in Table 2
+var tutorDetailRows = document.querySelectorAll('#table_schedule_tutor_detail tr:not(:first-child)');
+
+// Add click event listeners to the tutor rows in Table 2
+tutorDetailRows.forEach(function(row, index) {
+  var tutorNameCell = row.querySelector('td:first-child');
+  var tutorName = tutorNameCell.textContent;
+
+  // Check if the row belongs to Mr. Andre
+  if (tutorName === 'Mr. Andre') {
+    tutorNameCell.addEventListener('click', function() {
+      toggleTables();
+      console.log('Clicked Mr. Andre in Table 2');
+    });
+  }
+});
+
+// Function to toggle the visibility of tables
+function toggleTables() {
+  if (table1.style.display === 'block') {
+    table1.style.display = 'none';
+    table2.style.display = 'block';
+  } else {
+    table1.style.display = 'block';
+    table2.style.display = 'none';
+  }
+}

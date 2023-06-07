@@ -52,7 +52,36 @@
                           <!-- 1 -->
                           <div class="schedule_note_container">
                           <p class="title_notes">Re Schedule</p>
-                            
+                            <div class="table_reSchedule_container">
+                                <table class="table_reSchedule">
+                                  <tr class="table_reSchedule_header">
+                                    <th width="30%">Request By</th>
+                                    <th width="26%">Date</th>
+                                    <th>Time</th>
+                                    <th width="15%">Status</th>
+                                  </tr>
+                                  <tr>
+                                    <td>franciskusasiang@gmail.com</td>
+                                    <td>Saturday, 17 June 2023</td>
+                                    <td><a>13:00 - 14:00</a></td>
+                                    <td><a class="reschedule_accept">Accepted</a></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Alexandra@gmail.com</td>
+                                    <td>Friday, 27 June 2023</td>
+                                    <td><a>13:00 - 14:00</a></td>
+                                    <td><a class="reschedule_pending">Pending</a></td>
+                                  </tr>
+                                  <tr>
+                                    <td>PutuMia@gmail.com</td>
+                                    <td>Tuesday, 3 March 2023</td>
+                                    <td><a>08:00 - 10:00</a></td>
+                                    <td><a class="reschedule_reject">Rejected</a></td>
+                                  </tr>
+                                </table>
+
+                                <button id="askReschedule" class="">Ask Reschedule</button>
+                            </div>
                           </div>
 
                           <div class="schedule_note_container">
@@ -98,9 +127,9 @@
                     <!-- Schedule Tutor -->
                     <div class="schedule_bottom_side">
                         <div class="schedule_tutor">
-                          <div class="schedule_tutor_title">March 2023</div>
+                          <div class="schedule_tutor_title">March 2023 <img class="arrow_schedule_tutor_title" src="./Assets/arrow_agenda.png"></div>
                           <div class="table_schedule_tutor_container">
-                            <table class="table_schedule_tutor">
+                            <table class="table_schedule_tutor" id="table_schedule_tutor">
                               <tr class="table_schedule_title_row">
                                 <th style="border-radius: 10px 0 0 0;"></th>
                                 <th width="12%">Sun</th>
@@ -112,16 +141,16 @@
                                 <th width="12%" style="border-radius: 0 10px 0 0;">Sat</th>
                               </tr>
                               <tr>
-                                <td>Mr Andre  </td>
+                                <td id="tutor_lesson1" class="pointerCursor">Mr.Andre</td>
                                 <td class="point-active-schedule-green">09.00-10.00
                                   BHS INDO</td>
                                 <td></td>
                                 <td ></td>
-                                <td class="point-active-schedule-green">09.00-10.00
+                                <td class="point-active-schedule-green" >09.00-10.00
                                   BHS INDO</td>
                                 <td></td>
                                 <td ></td>
-                                <td class="point-active-schedule-green">09.00-10.00
+                                <td class="point-active-schedule-green" >09.00-10.00
                                   BHS INDO</td>
                               </tr>
                               <tr>
@@ -151,7 +180,77 @@
                                
                             </table>
                           </div>
+                          
+                          <table class="table_schedule_tutor_detail" id="table_schedule_tutor_detail">
+                            <tr>
+                              <th width="16%"></th>
+                              <th width="27%">Sun</th>
+                              <th width="27%">Wed</th>
+                              <th>Sat</th>
+                            </tr>
+                            <tr>
+                              <td class="pointerCursor">Mr. Andre</td>
+                              <td><div class="schedule_detail_lesson">Sub Materi : Kalimat Majemuk<br>
+                                09.00-10.00<br>
+                                Mata Pelajaran BHS INDO<br>
+                                Jumlah : 18 Orang
+                              </div></td>
+                              <td><div class="schedule_detail_lesson">Sub Materi : Kalimat Tunggal<br>
+                                09.00-10.00<br>
+                                Mata Pelajaran BHS INDO<br>
+                                Jumlah : 18 Orang
+                              </div></td>
+                              <td><div class="schedule_detail_lesson">Sub Materi : Kalimat Tanya dan Perintah<br>
+                                09.00-10.00<br>
+                                Mata Pelajaran BHS INDO<br>
+                                Jumlah : 18 Orang
+                              </div></td>
+                            </tr>
+                          </table>
                           <br>
+
+                          <!-- <table class="table_schedule_tutor_detail2" id="table_schedule_tutor_detail2">
+                            <tr>
+                              <th width="16%"></th>
+                              <th width="35%">Sun</th>
+                              <th width="35%">Sat</th>
+                            </tr>
+                            <tr>
+                              <td class="pointerCursor">Mr Mirah</td>
+                              <td><div class="schedule_detail_lesson2">Sub Materi : Kalimat Majemuk<br>
+                                09.00-10.00<br>
+                                Mata Pelajaran BHS INDO<br>
+                                Jumlah : 18 Orang
+                              </div></td>
+                              <td><div class="schedule_detail_lesson2">Sub Materi : Kalimat Majemuk<br>
+                                09.00-10.00<br>
+                                Mata Pelajaran BHS INDO<br>
+                                Jumlah : 18 Orang
+                              </div></td>
+                            </tr>
+                          </table>
+                          <br>
+                          <table class="table_schedule_tutor_detail3" id="table_schedule_tutor_detail3">
+                            <tr>
+                              <th width="16%"></th>
+                              <th width="35%">Sun</th>
+                              <th width="35%">Sat</th>
+                            </tr>
+                            <tr>
+                              <td class="pointerCursor">Mr Style</td>
+                              <td><div class="schedule_detail_lesson3">Sub Materi : Kalimat Majemuk<br>
+                                09.00-10.00<br>
+                                Mata Pelajaran BHS INDO<br>
+                                Jumlah : 18 Orang
+                              </div></td>
+                              <td><div class="schedule_detail_lesson3">Sub Materi : Kalimat Majemuk<br>
+                                09.00-10.00<br>
+                                Mata Pelajaran BHS INDO<br>
+                                Jumlah : 18 Orang
+                              </div></td>
+                            </tr>
+                          </table>
+                          <br> -->
                         </div>
                     </div>
 

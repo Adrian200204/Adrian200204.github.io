@@ -124,7 +124,7 @@ function generateCalendar() {
   content.appendChild(table);
   changeActive();
   changeHeader(dateSc);
-  document.getElementById("dateSc").textContent = dateSc;
+  // document.getElementById("dateSc").textContent = dateSc;
   getCurrentDate(document.getElementById("currentDateSchedule"), true);
   getCurrentDate(document.getElementById("dateSc"), false);
 

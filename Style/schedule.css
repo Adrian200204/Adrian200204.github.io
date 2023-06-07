@@ -332,6 +332,7 @@ font-size:20px;
 }
 
 .calendarSchedule {
+  font-weight: 700;
   box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);  
   height: 370px;
   width: 324px;
@@ -429,4 +430,303 @@ font-size:20px;
   border-radius: 70%;
   bottom: 25%;
   left: 26%;
+}
+
+.table_reSchedule_container{
+  margin-bottom: 15px;
+}
+
+.table_reSchedule{
+  font-size: 15px;
+  text-align: center;
+  width: 96%;
+  border-radius: 20px 20px 0 0;
+  margin-left: 10px;
+  box-shadow: 6px 5px 15px rgba(0, 0, 0, 0.2);  
+  border-radius: 10px;
+}
+
+.table_reSchedule_header{
+  background-color: rgb(84, 236, 228);
+  padding: 10px 0;
+}
+
+.table_reSchedule_header th{
+  border-right: 1.5px solid var(--black) ;
+  padding: 10px 0;
+}
+
+.table_reSchedule_header th:first-child{
+  border-radius: 10px 0 0 0 ;
+}
+.table_reSchedule_header th:last-child{
+  border-right: none;
+  border-radius: 0 10px 0 0 ;
+}
+
+.table_reSchedule td{
+  padding: 5px 5px;
+  border-right: 1.5px solid var(--black) ;
+}
+
+.table_reSchedule td:last-child{
+  border-right: none;
+}
+
+.table_reSchedule tr{
+  border-bottom: 1.5px solid var(--black);
+}
+
+.table_reSchedule tr:first-child{
+  border-bottom: none;
+}
+
+.table_reSchedule tr:last-child{
+  border-bottom: none;
+}
+
+
+.reschedule_accept{
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  background-color: var(--green-font);
+  border-radius: 10px;
+  padding: 15px;
+  padding: 0 7px;
+}
+
+.reschedule_accept:hover{
+  color: var(--black);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.reschedule_pending{
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  background-color: rgb(255, 162, 0);
+  border-radius: 10px;
+  padding: 15px;
+  padding: 0 7px;
+}
+
+.reschedule_pending:hover{
+  color: var(--black);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.reschedule_reject{
+  background-color: rgb(255, 110, 110);
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 15px;
+  padding: 0 7px;
+}
+.reschedule_reject:hover{
+  color: var(--black);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#askReschedule{
+  margin-top: 20px;
+  margin-left: 220px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: 500;
+  background-color: var(--blue-light);
+}
+
+#askReschedule:hover{
+  color: var(--black);
+  transition: 0.3s ease;
+}
+
+.arrow_schedule_tutor_title:hover{
+  cursor: pointer;
+}
+
+.table_schedule_tutor_detail{
+  font-size: 15px;
+  text-align: center;
+  width: 100%;
+  box-shadow: 6px 5px 15px rgba(0, 0, 0, 0.2);  
+  border: none;
+  border-radius: 10px;
+}
+
+.table_schedule_tutor_detail th{
+  background-color: #BDF6D5;
+  padding: 10px 0;
+  border-right: 1.5px solid var(--black);
+}
+.table_schedule_tutor_detail th:first-child{
+  border-radius: 10px 0 0 0 ;
+}
+
+.table_schedule_tutor_detail th:last-child{
+  border-right: none;
+  border-radius: 0 10px 0 0 ;
+}
+
+.table_schedule_tutor_detail td{
+  background-color: white;
+  padding: 10px 0;
+  font-weight: 500;
+  border-right: 1.5px solid var(--black);
+}
+
+.table_schedule_tutor_detail td:first-child{
+  border-radius: 0 0 0 10px ;
+}
+
+.table_schedule_tutor_detail td:last-child{
+  border-right: none;
+  border-radius: 0 0 10px 0 ;
+}
+
+.schedule_detail_lesson{
+  color: white;
+  text-decoration: none;
+  background-color: #2274FF;
+  text-align: left;
+  width: max-content;
+  padding: 6px;
+  margin-left: 14px;
+  border-radius: 10px;
+  font-weight: 400;
+  max-width: 220px;
+  margin-right: 20px;
+}
+
+.schedule_detail_lesson:hover{
+  background-color: #2274FF;
+  color: white;
+}
+
+.pointerCursor:hover{
+  cursor: pointer;
+}
+
+.table_schedule_tutor_detail2{  
+  font-size: 15px;
+  text-align: center;
+  width: 100%;
+  box-shadow: 6px 5px 15px rgba(0, 0, 0, 0.2);  
+  border: none;
+  border-radius: 10px;}
+
+  
+.table_schedule_tutor_detail2 th{
+  background-color: #BDF6D5;
+  padding: 10px 0;
+  border-right: 1.5px solid var(--black);
+}
+.table_schedule_tutor_detail2 th:first-child{
+  border-radius: 10px 0 0 0 ;
+}
+
+.table_schedule_tutor_detail2 th:last-child{
+  border-right: none;
+  border-radius: 0 10px 0 0 ;
+}
+
+.table_schedule_tutor_detail2 td{
+  background-color: white;
+  padding: 10px 0;
+  font-weight: 500;
+  border-right: 1.5px solid var(--black);
+}
+
+.table_schedule_tutor_detail2 td:first-child{
+  border-radius: 0 0 0 10px ;
+}
+
+.table_schedule_tutor_detail2 td:last-child{
+  border-right: none;
+  border-radius: 0 0 10px 0 ;
+}
+
+.schedule_detail_lesson2{
+  color: white;
+  text-decoration: none;
+  background-color: #2274FF;
+  text-align: left;
+  width: max-content;
+  padding: 6px;
+  margin-left: 80px;
+  border-radius: 10px;
+  font-weight: 400;
+  max-width: 350px;
+  margin-right: 20px;
+}
+
+.schedule_detail_lesson2:hover{
+  background-color: #2274FF;
+  color: white;
+}
+
+.table_schedule_tutor_detail3{  
+  font-size: 15px;
+  text-align: center;
+  width: 100%;
+  box-shadow: 6px 5px 15px rgba(0, 0, 0, 0.2);  
+  border: none;
+  border-radius: 10px;}
+
+  
+.table_schedule_tutor_detail3 th{
+  background-color: #BDF6D5;
+  padding: 10px 0;
+  border-right: 1.5px solid var(--black);
+}
+.table_schedule_tutor_detail3 th:first-child{
+  border-radius: 10px 0 0 0 ;
+}
+
+.table_schedule_tutor_detail3 th:last-child{
+  border-right: none;
+  border-radius: 0 10px 0 0 ;
+}
+
+.table_schedule_tutor_detail3 td{
+  background-color: white;
+  padding: 10px 0;
+  font-weight: 500;
+  border-right: 1.5px solid var(--black);
+}
+
+.table_schedule_tutor_detail3 td:first-child{
+  border-radius: 0 0 0 10px ;
+}
+
+.table_schedule_tutor_detail3 td:last-child{
+  border-right: none;
+  border-radius: 0 0 10px 0 ;
+}
+
+.schedule_detail_lesson3{
+  color: white;
+  text-decoration: none;
+  background-color: #2274FF;
+  text-align: left;
+  width: max-content;
+  padding: 6px;
+  margin-left: 80px;
+  border-radius: 10px;
+  font-weight: 400;
+  max-width: 350px;
+  margin-right: 20px;
+}
+
+.schedule_detail_lesson3:hover{
+  background-color: #2274FF;
+  color: white;
 }
